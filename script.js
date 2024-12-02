@@ -1,28 +1,38 @@
 //complete this code
 class Rectangle {
-	constructor (width, height){
-		this.height = height;
-		this.length = width;
+	constructor(width ,height)
+	{
+		this.width=width;
+		this.height=height;
 	}
-	getArea () {
-		console.log (this.length*this.height);
+
+	get getWidth()
+	{
+		return this.width;
+	}
+
+	get getHeight()
+	{
+		return this.height;
+	}
+
+	getArea()
+	{
+		return (this.width) * (this.height);
 	}
 }
 
-class Square extends Rectangle {
-	constructor (sides) {
-        super(sides, sides);
-		this.sidesOfSquare = sides;
+class Square extends Rectangle  {
+	constructor(width)
+	{
+		super(width,width);
 	}
-	getPerimeter() {
-		console.log(this.sidesOfSquare*4);
+	getPerimeter()
+	{
+		return 4*(this.width);
 	}
 }
 
-const rectangle = new Rectangle (5,10);
-rectangle.getArea();
-const square = new Square (7);
-square.getPerimeter();
 // Do not change the code below this line
 window.Rectangle = Rectangle;
 window.Square = Square;
